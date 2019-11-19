@@ -13,12 +13,14 @@ Shape* New_Triangle(double a, double b, double c, double h){
     tr->b = b;
     tr->c = c;
     tr->h = h;
+    ((Shape*)tr)->derivedObj = tr;
     ((Shape*)tr)->area = TriangleArea;
     ((Shape*)tr)->perimeter = TrianglePerimeter;
+    return tr;
 }
 
 double TriangleArea(Shape * sh){
-    return(((Triangle*)sh)->b *  ((Triangle*)sh)->h / 2);
+    return(((Triangle*)sh)->b * ((Triangle*)sh)->h / 2);
 }
 
 double TrianglePerimeter(Shape * sh){

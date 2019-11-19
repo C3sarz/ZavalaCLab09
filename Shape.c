@@ -7,7 +7,6 @@
 //
 #include <stdlib.h>
 #include "Shape.h"
-
 Shape* New_Shape() {
     Shape* sh = NULL;
     
